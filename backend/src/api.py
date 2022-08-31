@@ -57,7 +57,6 @@ def headers(jwt):
 def get_drinks(jwt):
     try:
         my = Drink.query.all()
-        #print(my)
         return jsonify({
             "success":True,
             "drinks":Drink.short(my[0])
@@ -79,15 +78,11 @@ def get_drinks(jwt):
 def detail_drinks(jwt):
     try:
         my = Drink.query.all()
-        #print(my)
         lst=[]
         for i in range(len(my)):
-            #print(my[i].recipe)
             res = Drink.short(my[i])
-            #print(res)
             lst.append(res)
 
-        #print(lst)
         return jsonify({
             "success":True,
             "drinks":lst
@@ -114,7 +109,7 @@ def add_drinks(jwt):
         if req_recipe =="" or req_title=="":
             return jsonify({
                 "success":False,
-                "message": "Please provide all fields"
+                "message": "Please provide the title and the name of the recipe"
             })
         idi = random.randint(0,999)
         drink = Drink(
@@ -149,11 +144,14 @@ def add_drinks(jwt):
 def update_drinks(jwt,id):
    
         content = request.get_json()
-        rid = content.get('id', None)
         req_recipe = content.get('recipe', None)
         req_title = content.get('title', None)
+        if req_recipe =="" or req_title=="":
+            return jsonify({
+                "success":False,
+                "message": "Please provide the title and the name of the recipe"
+            })
         drink = Drink.query.filter(Drink.id == id).one_or_none()
-        print(json.dumps(req_recipe))
         drink.recipe=json.dumps(req_recipe)
         drink.title = req_title
         drink.update()
