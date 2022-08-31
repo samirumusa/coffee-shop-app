@@ -10,9 +10,6 @@ from dotenv import find_dotenv, load_dotenv
 from .database.models import db_drop_and_create_all, setup_db, Drink
 from .auth.auth import requires_auth, get_token_auth_header, check_permission, verify_decode_jwt
 import random
-from passlib.hash import md5_crypt as md5
-from passlib.hash import sha256_crypt as sha256
-from passlib.hash import sha512_crypt as sha512
 ENV_FILE = find_dotenv()
 if ENV_FILE:
     load_dotenv(ENV_FILE)
