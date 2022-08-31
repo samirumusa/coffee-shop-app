@@ -1,0 +1,14 @@
+Collecting authlib
+  Downloading Authlib-1.0.1-py2.py3-none-any.whl (214 kB)
+     ------------------------------------ 214.1/214.1 KB 283.6 kB/s eta 0:00:00
+Collecting cryptography>=3.2
+  Downloading cryptography-37.0.4-cp36-abi3-win_amd64.whl (2.4 MB)
+     ---------------------------------------- 2.4/2.4 MB 1.7 MB/s eta 0:00:00
+Collecting cffi>=1.12
+  Downloading cffi-1.15.1-cp310-cp310-win_amd64.whl (179 kB)
+     -------------------------------------- 179.1/179.1 KB 1.5 MB/s eta 0:00:00
+Collecting pycparser
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     -------------------------------------- 118.7/118.7 KB 1.2 MB/s eta 0:00:00
+Installing collected packages: pycparser, cffi, cryptography, authlib
+Successfully installed authlib-1.0.1 cffi-1.15.1 cryptography-37.0.4 pycparser-2.21
