@@ -79,7 +79,9 @@ class Drink(db.Model):
     '''
 
     def long(self):
+        print(self)
         long_recipe = [{'name': r['name'],'color': r['color'], 'parts': r['parts']} for r in json.loads(self.recipe[0])]
+        
         return {
             'id': self.id,
             'title': self.title,

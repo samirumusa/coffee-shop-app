@@ -10,6 +10,7 @@ from dotenv import find_dotenv, load_dotenv
 from .database.models import db_drop_and_create_all, setup_db, Drink
 from .auth.auth import requires_auth, get_token_auth_header, check_permission, verify_decode_jwt
 import random
+
 ENV_FILE = find_dotenv()
 if ENV_FILE:
     load_dotenv(ENV_FILE)
@@ -56,14 +57,14 @@ def headers(jwt):
 def get_drinks(jwt):
     try:
         my = Drink.query.all()
-        
+        #print(my)
         return jsonify({
             "success":True,
             "drinks":Drink.short(my[0])
         })
     except:
         abort(404)
-
+   
 '''
 @DONE implement endpoint
     GET /drinks-detail
@@ -78,6 +79,7 @@ def get_drinks(jwt):
 def detail_drinks(jwt):
     try:
         my = Drink.query.all()
+        #print(my)
         lst=[]
         for i in range(len(my)):
             #print(my[i].recipe)
@@ -109,6 +111,11 @@ def add_drinks(jwt):
         content = request.get_json()
         req_recipe = content.get('recipe', None)
         req_title = content.get('title', None)
+        if req_recipe =="" or req_title=="":
+            return jsonify({
+                "success":False,
+                "message": "Please provide all fields"
+            })
         idi = random.randint(0,999)
         drink = Drink(
                       title=req_title, 
@@ -143,11 +150,12 @@ def update_drinks(jwt,id):
    
         content = request.get_json()
         rid = content.get('id', None)
-        req_recipe = str(content.get('recipe', None))
+        req_recipe = content.get('recipe', None)
         req_title = content.get('title', None)
-        drink = Drink.query.filter(Drink.id == rid).one_or_none()
+        drink = Drink.query.filter(Drink.id == id).one_or_none()
+        print(json.dumps(req_recipe))
+        drink.recipe=json.dumps(req_recipe)
         drink.title = req_title
-        drink.recipe= req_recipe
         drink.update()
         return jsonify({
            'success':True,
