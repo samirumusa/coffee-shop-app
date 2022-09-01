@@ -25,11 +25,6 @@ def after_request(response):
         return response
 
 
-@app.route('/headers')
-@requires_auth("get:drink")
-def headers(jwt):
-    print(jwt)
-    return 'Access Granted'
 
 '''
 @DONE uncomment the following line to initialize the datbase
@@ -49,8 +44,7 @@ def headers(jwt):
         or appropriate status code indicating reason for failure
 '''
 @app.route('/drinks', methods=['GET'])
-@requires_auth("get:drinks")
-def get_drinks(jwt):
+def get_drinks():
     try:
         my = Drink.query.all()
         return jsonify({
@@ -211,8 +205,29 @@ def not_found(error):
 '''
 @app.errorhandler(422)
 def unprocessable(error):
-    return jsonify({
-        "success": False,
-        "error": 422,
-        "message": "unprocessable"
-    }), 422
+    return (
+        jsonify({"success": False, "error": 422, "message": "unprocessable"}),
+        422,
+    )
+@app.errorhandler(400)
+def bad_request(error):
+    return jsonify({"success": False, "error": 400, "message": "bad request"}), 400
+
+@app.errorhandler(405)
+def not_found(error):
+    return (
+        jsonify({"success": False, "error": 405, "message": "method not allowed"}),
+        405,
+    )
+@app.errorhandler(401)
+def unauthorized(error):
+    return (
+        jsonify({"success": False, "error": 401, "message": "Wrong credentials!"}),
+        401,
+    )
+@app.errorhandler(403)
+def forbidden(error):
+    return (
+        jsonify({"success": False, "error": 403, "message": "This action is forbidden for you!"}),
+        401,
+    )
