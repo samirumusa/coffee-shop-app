@@ -119,7 +119,7 @@ export class DrinksService {
         }
       });
     } else { // insert
-      this.http.post(this.url + '/drink', drink, this.getHeaders())
+      this.http.post(this.url + '/drinks', drink, this.getHeaders())
       .subscribe( (res: any) => {
         if (res.success) {
           this.drinksToItems(res.drinks);
