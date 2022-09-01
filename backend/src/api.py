@@ -6,14 +6,10 @@ from sqlalchemy import exc
 import json
 from flask_cors import CORS
 from functools import wraps
-from dotenv import find_dotenv, load_dotenv
 from .database.models import db_drop_and_create_all, setup_db, Drink
 from .auth.auth import requires_auth, get_token_auth_header, check_permission, verify_decode_jwt
 import random
 
-ENV_FILE = find_dotenv()
-if ENV_FILE:
-    load_dotenv(ENV_FILE)
 
 app = Flask(__name__)
 setup_db(app)
