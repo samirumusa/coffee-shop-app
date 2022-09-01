@@ -7,7 +7,7 @@ import json
 from flask_cors import CORS
 from functools import wraps
 from .database.models import db_drop_and_create_all, setup_db, Drink
-from .auth.auth import requires_auth, get_token_auth_header, check_permission, verify_decode_jwt
+from .auth.auth import requires_auth, get_token_auth_header, check_permission, verify_decode_jwt, AuthError
 import random
 
 
@@ -89,7 +89,7 @@ def detail_drinks(jwt):
     returns status code 200 and json {"success": True, "drinks": drink} where drink an array containing only the newly created drink
         or appropriate status code indicating reason for failure
 '''
-@app.route('/drink', methods=['POST'])
+@app.route('/drinks', methods=['POST'])
 @requires_auth("post:drinks")
 def add_drinks(jwt):
     try:
@@ -231,3 +231,10 @@ def forbidden(error):
         jsonify({"success": False, "error": 403, "message": "This action is forbidden for you!"}),
         401,
     )
+@app.errorhandler(AuthError)
+def invalid_claims(error):
+    return jsonify({
+        "success": False,
+        "error": 401,
+        "message": error.__dict__
+    }), 401
