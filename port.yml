@@ -69,11 +69,11 @@
       - galaxy
       - pluto
       - andromeda
-- identifier: jamer@gmail.com
+- identifier: jaamer@gmail.com
   title: Sam Haan
   blueprint: _user
   properties:
-    status: Invited
+    status: Active
     port_type: Standard
   relations:
     teams:
