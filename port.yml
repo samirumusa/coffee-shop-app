@@ -65,3 +65,14 @@
       - galaxy
       - pluto
       - andromeda
+- identifier: jamer@gmail.com
+  title: Sam Haan
+  blueprint: User
+  properties:
+    status: Invited
+    port_type: Standard
+  relations:
+    teams:
+      - galaxy
+      - pluto
+      - andromeda
