@@ -58,6 +58,17 @@
       - galaxy
       - pluto
       - andromeda
+- identifier: samermmusa747@gmail.com
+  title: Samiru Musa Haruna
+  blueprint: _user
+  properties:
+    status: Invited
+    port_type: Standard
+  relations:
+    teams:
+      - galaxy
+      - pluto
+      - andromeda
 - identifier: jamermusa747@gmail.com
   title: Samiru Musa Haruna
   blueprint: _user
