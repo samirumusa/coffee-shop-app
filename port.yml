@@ -22,6 +22,7 @@
 - identifier: smusa87@gmail.com
   title: Smiru Musa Haruna
   blueprint: _user
+  properties:
   relations:
     teams:
       - galaxy
