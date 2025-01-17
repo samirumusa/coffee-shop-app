@@ -16,6 +16,9 @@
 - identifier: pluto
   title: pluto
   blueprint: _team
+- identifier: neptune
+  title: neptune
+  blueprint: _team
 - identifier: smusa87@gmail.com
   title: Samiru Musa Haruna
   blueprint: _user
