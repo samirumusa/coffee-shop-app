@@ -67,7 +67,7 @@
       - andromeda
 - identifier: jamer@gmail.com
   title: Sam Haan
-  blueprint: User
+  blueprint: _user
   properties:
     status: Invited
     port_type: Standard
