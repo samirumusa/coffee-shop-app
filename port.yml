@@ -24,12 +24,12 @@
       - "pluto"
       - "andromeda"
       - "ehe"
-- identifier: "sameermusa747@gmail.com"
-  title: "Samiru Musa Haruna"
-  blueprint: "_user"
+- identifier: sameermusa747@gmail.com
+  title: Samiru Musa Haruna
+  blueprint: _user
   properties:
   relations:
     teams:
-      - "pluto"
+      - pluto
       - "andromeda"
       - "pulsa"
