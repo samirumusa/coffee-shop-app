@@ -49,7 +49,7 @@
   title: Samiru Musa Haruna
   blueprint: _user
   properties:
-     status: Enabled
+     status: Active
   relations:
     teams:
       - galaxy
