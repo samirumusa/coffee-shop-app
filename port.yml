@@ -20,7 +20,7 @@
   title: smusa87@gmail.com
   blueprint: _user
   schema:
-    properties:
+    relations:
       teams:
       - galaxy
         pluto
