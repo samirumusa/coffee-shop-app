@@ -21,7 +21,7 @@
   blueprint: _user
   relations:
     teams:
-    - galaxy
-    - pluto
-    - andromeda
-    - ehe
+    - "galaxy"
+    - "pluto"
+    - "andromeda"
+    - "ehe"
