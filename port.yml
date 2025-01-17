@@ -36,3 +36,12 @@
     teams: 
      - andromeda 
      - pulsar
+- identifier: sameermusa747@gmail.com
+  title: Smiru Musa Haruna
+  blueprint: _user
+  properties:
+  relations:
+    teams:
+      - galaxy
+      - pluto
+      - andromeda
