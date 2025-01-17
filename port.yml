@@ -20,7 +20,7 @@
   title: neptune
   blueprint: _team
 - identifier: smusa87@gmail.com
-  title: Samiru Musa Haruna
+  title: Smiru Musa Haruna
   blueprint: _user
   relations:
     teams:
