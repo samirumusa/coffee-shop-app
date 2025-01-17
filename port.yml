@@ -59,7 +59,6 @@
   title: Samiru Musa Haruna
   blueprint: _user
   properties:
-     status: Active
   relations:
     teams:
       - galaxy
