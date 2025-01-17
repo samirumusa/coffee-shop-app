@@ -19,10 +19,9 @@
 - identifier: smusa87@gmail.com
   title: smusa87@gmail.com
   blueprint: _user
-  schema:
-    relations:
-      teams:
-      - galaxy
-        pluto
-        andromeda
-        ehe
+  relations:
+    teams:
+    - galaxy
+      pluto
+      andromeda
+      ehe
