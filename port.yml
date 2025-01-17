@@ -17,7 +17,6 @@
   title: pluto
   blueprint: _team
 - identifier: smusa87@gmail.com
-  title: smusa87@gmail.com
   blueprint: _user
   relations:
     teams:
