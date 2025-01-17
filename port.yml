@@ -40,6 +40,8 @@
   title: Samiru Musa Haruna
   blueprint: _user
   properties:
+    status: Invited
+    port_type: Standard
   relations:
     teams:
       - galaxy
@@ -49,7 +51,8 @@
   title: Samiru Musa Haruna
   blueprint: _user
   properties:
-     status: Invited
+    status: Invited
+    port_type: Standard
   relations:
     teams:
       - galaxy
@@ -59,7 +62,8 @@
   title: Samiru Musa Haruna
   blueprint: _user
   properties:
-     status: Invited
+    status: Invited
+    port_type: Standard
   relations:
     teams:
       - galaxy
