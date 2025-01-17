@@ -32,4 +32,4 @@
   blueprint: _user
   properties:
   relations:
-    teams: andromeda
+    teams: [andromeda pulsar]
