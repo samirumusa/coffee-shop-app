@@ -99,8 +99,8 @@
   properties:
     india: "bihar"
     continent: africa
-- identifier: shipping
-  title: Shipping
+- identifier: user
+  title: user
   blueprint: domain
   properties:
     mirro: test
