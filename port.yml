@@ -99,11 +99,6 @@
   properties:
     india: "bihar"
     continent: africa
-- identifier: user
-  title: user
-  blueprint: domain
-  properties:
-    mirro: test
 - identifier: shipp
   title: Shipp
   blueprint: domain
