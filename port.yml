@@ -115,4 +115,4 @@
   title: user
   blueprint: domain
   properties:
-    mytest: they are
+    mytest: "they are"
