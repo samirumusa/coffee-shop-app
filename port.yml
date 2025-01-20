@@ -83,7 +83,6 @@
   title: Sam Haan
   blueprint: _user
   properties:
-    port_type: Service Account
   relations:
     teams:
       - galaxy
