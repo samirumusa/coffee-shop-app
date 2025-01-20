@@ -109,3 +109,8 @@
   blueprint: domain
   properties:
     mirro: test
+- identifier: payment
+  title: payment
+  blueprint: domain
+  properties:
+    mirro: test
