@@ -98,3 +98,4 @@
   blueprint: _team
   properties:
     india: "bihar"
+    continent: africa
