@@ -100,6 +100,6 @@
     india: "bihar"
     continent: africa
 - identifier: shipping
-  blueprint: domains
+  blueprint: domain
   properties:
     mirro: test
