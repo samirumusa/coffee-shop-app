@@ -104,3 +104,8 @@
   blueprint: domain
   properties:
     mirro: test
+- identifier: shipp
+  title: Shipp
+  blueprint: domain
+  properties:
+    mirro: test
