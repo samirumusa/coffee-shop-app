@@ -115,6 +115,4 @@
   title: user
   blueprint: domain
   properties:
-    mirro: iam
-    architecture: null
-    mytest: youre
+    mytest: they are
