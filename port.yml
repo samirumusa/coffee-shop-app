@@ -78,6 +78,7 @@
       - pluto
       - andromeda
       - youtube
+      - pulsar
 - identifier: jaamer@gmail.com
   title: Sam Haan
   blueprint: _user
@@ -89,3 +90,4 @@
       - pluto
       - andromeda
       - james
+      - pulsar
