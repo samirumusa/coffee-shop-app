@@ -96,3 +96,5 @@
 - identifier: magelanic
   title: magelanic
   blueprint: _team
+  properties:
+    india: bihar
