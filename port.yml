@@ -88,3 +88,6 @@
       - pluto
       - andromeda
       - pulsar
+- identifier: batelguese
+  title: batelguese
+  blueprint: _team
