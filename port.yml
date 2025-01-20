@@ -102,4 +102,4 @@
 - identifier: shipping
   blueprint: domains
   properties:
-    mirror: test
+    mirro: test
