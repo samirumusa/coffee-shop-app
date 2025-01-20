@@ -97,8 +97,7 @@
   title: magelanic
   blueprint: _team
   properties:
-    india: "bihar"
-    continent: africa
+    india: "banglore"
 - identifier: shipp
   title: Shipp
   blueprint: domain
