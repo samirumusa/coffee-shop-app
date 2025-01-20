@@ -108,9 +108,9 @@
   title: payment
   blueprint: domain
   properties:
-    mirro: iam
+    mirro: "iam"
     architecture: null
-    mytest: youre
+    mytest: "youre"
 - identifier: user
   title: user
   blueprint: domain
