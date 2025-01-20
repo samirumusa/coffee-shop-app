@@ -99,3 +99,7 @@
   properties:
     india: "bihar"
     continent: africa
+- identifier: shipping
+  blueprint: domains
+  properties:
+    mirror: test
