@@ -114,3 +114,4 @@
   blueprint: domain
   properties:
     mirro: iam
+    architecture: null
