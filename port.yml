@@ -116,3 +116,10 @@
     mirro: iam
     architecture: null
     mytest: youre
+- identifier: user
+  title: user
+  blueprint: domain
+  properties:
+    mirro: iam
+    architecture: null
+    mytest: youre
