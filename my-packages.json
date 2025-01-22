@@ -23,13 +23,12 @@
       }
     },
     {
-      "name": "database2",
+      "name": "database3",
       "type": "Psql",
       "containers": {
-        "name": "containerA",
-        "reference_id": "database1:containerA"
+        "name": "containerB",
+        "reference_id": "database1:containerB"
       }
     }
   ]
 }
-
