@@ -1,7 +1,7 @@
 team_id: "Unique Team ID"
 managed_services:
   cosmosdb_sql:
-    name: "Name of the CosmosDB-Account"
+    name: "NameoftheCosmosDB-Account"
     other_properties: "Other properties"
     databases:
       - db_name: "Database 1"
