@@ -1,18 +1,22 @@
-databases:
-  - name: database1
-    type: NoSQL
-    containers:
-      - name: container1
-        reference_id: "database1:container1"
-      - name: container2
-        reference_id: "database1:container2"
-  - name: database2
-    type: Psql  
-    containers:
-        name: containerA
-        reference_id: "database1:containerA"      
-  - name: database2
-    type: Psql  
-    containers:
-        name: containerA
-        reference_id: "database1:containerA"
+team_id: "Unique Team ID"
+managed_services:
+  cosmosdb_sql:
+    name: "Name of the CosmosDB-Account"
+    other_properties: "Other properties"
+    databases:
+      - db_name: "Database 1"
+        containers:
+          - container_name: "Container 1"
+            partition_key: "/partition_key"
+            other_properties: "Other properties"
+          - container_name: "Container 2"
+            partition_key: "/partition_key"
+            other_properties: "Other properties"
+      - db_name: "Database 2"
+        containers:
+          - container_name: "Container 3"
+            partition_key: "/partition_key"
+            other_properties: "Other properties"
+          - container_name: "Container 4"
+            partition_key: "/partition_key"
+            other_properties: "Other properties"
