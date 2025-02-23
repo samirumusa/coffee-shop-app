@@ -1,6 +1,6 @@
 - identifier: example444
   title: Example444
-  blueprint: Microservice
+  blueprint: microservice
   properties: 
     owner: port-labs
     runtime: NodeJs
