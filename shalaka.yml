@@ -1,12 +1,12 @@
-identifier: OBIE-3.1.11
-title: OBIE-3.1.11
-icon: null
-blueprint: standard
-properties:
-  name: OBIE
-  version: 3.1.11
-  internal-docs:
-    - "https://<>"
-  external-docs:
-    - "https://<>"
-relations: {}
+- identifier: OBIE-3.1.11
+  title: OBIE-3.1.11
+  icon: null
+  blueprint: standard
+  properties:
+    name: OBIE
+    version: 3.1.11
+    internal-docs:
+      - "https://<>"
+    external-docs:
+      - "https://<>"
+  relations: {}
