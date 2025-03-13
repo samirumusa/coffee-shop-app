@@ -6,7 +6,7 @@
     name: OBIE
     version: 3.1.11
     internal-docs:
-      - https://<>
+      - "https://<>"
     external-docs:
-      - https://<>
-  relations:
+      - "https://<>"
+  relations: {}
