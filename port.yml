@@ -31,6 +31,8 @@
      vault: ["https://vault.1cp.us-west-2.aws.enklavo.com:8200"]
      documentation: ["https://github.com/Smarsh/Search-Rest-API/blob/master/README.md"]
      repo_type: service
+  relations:
+    product: ["product_001"]
      
      
 
