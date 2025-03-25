@@ -8,11 +8,11 @@
   blueprint: domain
   properties:
     aws-region: https://lucid.app/documents/embedded/c3d64493-a5fe-4b18-98d5-66d355080de3
-- identifier: Search-Rest-API
+- identifier: search_rest_api
   title: Search-Rest-API
   blueprint: service_smarsh
-  slack: https://smarsh.slack.com/archives/C01C49S4K3J
   team: ["andromeda"]
   properties:
      description: "Rest API to fire ES queries in tier2 flow"
+     slack: https://smarsh.slack.com/archives/C01C49S4K3J
 
