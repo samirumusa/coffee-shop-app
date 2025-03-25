@@ -5,7 +5,7 @@
     aws-region: https://lucid.app/documents/embedded/c3d64493-a5fe-4b18-98d5-66d355080de3
 - identifier: Search-Rest-API
   title: Search-Rest-API
-  blueprint: service
+  blueprint: service_smarsh
   slack: https://smarsh.slack.com/archives/C01C49S4K3J
   team: ["andromeda"]
   properties:
