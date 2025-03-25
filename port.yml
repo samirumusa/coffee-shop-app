@@ -11,7 +11,6 @@
 - identifier: search_rest_api
   title: Search-Rest-API
   blueprint: service_smarsh
-  team: ["andromeda"]
   properties:
      description: "Rest API to fire ES queries in tier2 flow"
      slack: https://smarsh.slack.com/archives/C01C49S4K3J
