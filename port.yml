@@ -22,6 +22,7 @@
 - identifier: Search-Rest-API
   title: Search-Rest-API
   blueprint: service_smarsh
+  team: ["andromeda","pulsa"]
   properties:
      description: "Rest API to fire ES queries in tier2 flow"
      slack: https://smarsh.slack.com/archives/C01C49S4K3J
@@ -30,6 +31,7 @@
      vault: ["https://vault.1cp.us-west-2.aws.enklavo.com:8200"]
      documentation: ["https://github.com/Smarsh/Search-Rest-API/blob/master/README.md"]
      repo_type: service
+     
      
 
 
