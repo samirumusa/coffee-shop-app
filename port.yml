@@ -9,5 +9,5 @@
   slack: https://smarsh.slack.com/archives/C01C49S4K3J
   team: ["andromeda"]
   properties:
-  description: "Rest API to fire ES queries in tier2 flow"
+     description: "Rest API to fire ES queries in tier2 flow"
 
