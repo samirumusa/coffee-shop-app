@@ -33,7 +33,20 @@
      repo_type: service
   relations:
     product: ["product_001"]
-     
+- identifier: Searches-Rest-API
+  title: Searches-Rest-API
+  blueprint: service_smarsh
+  team: ["andromeda pulsar"]
+  properties:
+     description: "Rest API to fire ES queries in tier2 flow"
+     slack: https://smarsh.slack.com/archives/C01C49S4K3J
+     monitor_dashboards: ["https://app.datadoghq.com/dashboard/xam-2qj-frm"]
+     logs: ["https://kibana.us-east-1.aws.smarsh.cloud/app/discover"]
+     vault: ["https://vault.1cp.us-west-2.aws.enklavo.com:8200"]
+     documentation: ["https://github.com/Smarsh/Search-Rest-API/blob/master/README.md"]
+     repo_type: service
+  relations:
+    product: ["product_001"]
      
 
 
