@@ -1,4 +1,3 @@
-createMissingRelatedEntities: true
 - identifier: payment
   title: Payment
   blueprint: domain
