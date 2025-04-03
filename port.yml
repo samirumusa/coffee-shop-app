@@ -46,7 +46,7 @@
      documentation: ["https://github.com/Smarsh/Search-Rest-API/blob/master/README.md"]
      repo_type: service
   relations:
-    product: ["product_001"]
+    product: ["product_001", "product_007"]
      
 
 
