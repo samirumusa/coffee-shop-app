@@ -49,7 +49,7 @@
     product: ["product_001", "product_007"]
 - identifier: virtual-accounts-management
   title: virtual-accounts-management
-  team: collections_core
+  team: andromeda
   blueprint: virtual-accounts-management
   properties:
     agile_delivery_manager: glavelle@visa.com
