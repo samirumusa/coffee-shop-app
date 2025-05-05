@@ -1,17 +1,17 @@
-- identifier: virtual-accounts-management5
-  title: virtual-accounts-management5
-  team: andromeda
-  blueprint: virtual-accounts-management
-  properties:
-    agile_delivery_manager: glavelle@visa.com
-    email: GDLCCcollections-core@visa.com
-    engineering_manager: cwiddall@visa.com
-    external_facing: false
-    handles_pii: true
-    lifecycle: Production
-    product_manager: eoneil@visa.com
-    runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
-    singleton: false
-    slack_channel: team-collections-core
-    tier: "1"
-    values: 
+identifier: virtual-accounts-management5
+title: virtual-accounts-management5
+team: andromeda
+blueprint: virtual-accounts-management
+properties:
+  agile_delivery_manager: glavelle@visa.com
+  email: GDLCCcollections-core@visa.com
+  engineering_manager: cwiddall@visa.com
+  external_facing: false
+  handles_pii: true
+  lifecycle: Production
+  product_manager: eoneil@visa.com
+  runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
+  singleton: false
+  slack_channel: team-collections-core
+  tier: "1"
+  values: 
