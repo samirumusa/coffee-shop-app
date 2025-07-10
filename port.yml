@@ -4,7 +4,7 @@ team: andromeda
 blueprint: virtual-accounts-management
 properties:
   agile_delivery_manager: glavelle@visa.co
-  email: GDLCCcollections-core@visa.com
+  email: GDLCCcollection-core@visa.com
   engineering_manager: cwiddall@visa.com
   external_facing: false
   handles_pii: true
