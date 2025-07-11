@@ -8,7 +8,7 @@ properties:
   engineering_manager: cwiddall@visa.com
   external_facing: false
   handles_pii: true
-  lifecycle: Productions
+  lifecycle: Production
   product_manager: eoneil@visa.com
   runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
   singleton: false
