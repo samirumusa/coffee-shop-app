@@ -10,7 +10,7 @@ properties:
   handles_pii: true
   lifecycle: Production
   product_manager: eoneil@visa.com
-  runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
+  runbook_url: https://ccyclouds.atlassian.net/wiki/x/P4A4XAE
   singleton: false
   slack_channel: team-collection-core
   tier: "1"
