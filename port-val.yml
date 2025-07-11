@@ -16,5 +16,5 @@ properties:
   tier: "1"
   values: 
 relations:
-  domain: "test"
+  domain: "testos"
   team: "pulsar"
