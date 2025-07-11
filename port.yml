@@ -7,7 +7,7 @@ properties:
   email: GDLCCcollection-core@visa.com
   engineering_manager: cwiddall@visa.com
   external_facing: false
-  handles_pii: true
+  handles_pii: false
   lifecycle: Production
   product_manager: eoneil@visa.com
   runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
@@ -16,5 +16,5 @@ properties:
   tier: "1"
   values: 
 relations:
-  domain: "tescos"
+  domain: "test"
   team: "andromeda"
