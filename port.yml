@@ -9,8 +9,8 @@ properties:
   external_facing: false
   handles_pii: true
   lifecycle: Productions
-  product_manager: eoneil@visas.com
-  runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
+  product_manager: eoneil@visa.com
+  runbook_url: https://ccyclouds.atlassian.net/wiki/x/P4A4XAE
   singleton: false
   slack_channel: team-collections-core
   tier: "1"
