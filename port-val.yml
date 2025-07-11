@@ -4,7 +4,7 @@ team: andromeda
 blueprint: virtual-accounts-management
 properties:
   agile_delivery_manager: glavelle@visa.co
-  email: GDLCCcollection-core@visa.com
+  email: GDLCCcollectionsamir-core@visa.com
   engineering_manager: cwiddall@visa.com
   external_facing: false
   handles_pii: true
@@ -16,5 +16,5 @@ properties:
   tier: "1"
   values: 
 relations:
-  domain: "testos"
-  team: "pulsa"
+  domain: "test"
+  team: "puls"
