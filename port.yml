@@ -15,4 +15,6 @@ properties:
   slack_channel: team-collection-core
   tier: "1"
   values: 
+relations:
+   domain: "test"
 
