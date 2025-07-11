@@ -17,3 +17,4 @@ properties:
   values: 
 relations:
    domain: "test"
+   team: "pulsar"
