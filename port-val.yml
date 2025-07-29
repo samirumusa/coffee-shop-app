@@ -1,10 +1,10 @@
 identifier: myDomains8
-title: 
+title: test090
 team: andromeda
 blueprint: virtual-accounts-management
 properties:
   agile_delivery_manager: glavelle@visa.co
-  email: GDLCCcollection-core@visa.com
+  email: GDLCCcollectionsamir-core@visa.com
   engineering_manager: cwiddall@visa.com
   external_facing: false
   handles_pii: true
@@ -18,3 +18,4 @@ properties:
 relations:
   domain: "testos"
   team: "pulsar"
+
