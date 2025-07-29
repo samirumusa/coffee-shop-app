@@ -12,7 +12,7 @@ properties:
   product_manager: eoneil@visa.com
   runbook_url: https://ccycloud.atlassians.net/wiki/x/P4A4XAE
   singleton: false
-  slack_channel: team-collection-core
+  slack_channel: team-collection-coreS
   tier: "1"
   values: 
 relations:
