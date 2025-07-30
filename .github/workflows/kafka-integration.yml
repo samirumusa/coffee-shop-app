@@ -1,41 +1,27 @@
 name: Port Ocean Kafka Integration
 
+# Kafka Exporter Workflow
+# This workflow is responsible for running the Kafka exporter.
+# cluster_conf_mapping: Mapping of Kafka cluster names to Kafka client config.
+# Example: {"my cluster": {"bootstrap.servers": "localhost:9092"}}
+
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
+  schedule:
+    - cron: '0 */1 * * *' # Runs every hour
 
 jobs:
   run-integration:
     runs-on: ubuntu-latest
+    timeout-minutes: 30 # Set a time limit for the job
 
     steps:
-      - name: Checkout code (optional)
-        uses: actions/checkout@v3
-
-      - name: Debug Print decoded secret value
-        run: |
-          echo "Decoded OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING:"
-          echo "$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING" | base64 --decode
-        env:
-          OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING: ${{ secrets.OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING }}
-
-      - name: Run Port Ocean Kafka Container
-        env:
-          OCEAN__PORT__CLIENT_ID: ${{ secrets.OCEAN__PORT__CLIENT_ID }}
-          OCEAN__PORT__CLIENT_SECRET: ${{ secrets.OCEAN__PORT__CLIENT_SECRET }}
-          OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING: ${{ secrets.OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING }}
-        run: |
-          integration_type="kafka"
-          version="latest"
-          image_name="ghcr.io/port-labs/port-ocean-$integration_type:$version"
-
-          docker run -i --rm \
-            -e OCEAN__EVENT_LISTENER='{"type":"ONCE"}' \
-            -e OCEAN__INITIALIZE_PORT_RESOURCES=true \
-            -e OCEAN__SEND_RAW_DATA_EXAMPLES=true \
-            -e OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING="$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING" \
-            -e OCEAN__PORT__CLIENT_ID="$OCEAN__PORT__CLIENT_ID" \
-            -e OCEAN__PORT__CLIENT_SECRET="$OCEAN__PORT__CLIENT_SECRET" \
-            -e OCEAN__PORT__BASE_URL="https://api.getport.io" \
-            $image_name
+      - name: Run Kafka Integration
+        uses: port-labs/ocean-sail@v1
+        with:
+          type: kafka
+          port_client_id: ${{ secrets.PORT_CLIENT_ID }}
+          port_client_secret: ${{ secrets.PORT_CLIENT_SECRET }}
+          port_base_url: "https://api.port.io"
+          config: |
+            cluster_conf_mapping: ${{ secrets.OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING }}
