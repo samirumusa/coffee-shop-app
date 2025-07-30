@@ -1,4 +1,4 @@
-name: Port Ocean Kafka Integraton
+name: Port Ocean Kafka Integration
 
 on:
   workflow_dispatch:
@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code (optional)
         uses: actions/checkout@v3
 
-      - name: Debug Print secret value
+      - name: Debug Print decoded secret value
         run: |
-          echo "OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING:"
-          echo "$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING"
+          echo "Decoded OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING:"
+          echo "$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING" | base64 --decode
         env:
           OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING: ${{ secrets.OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING }}
 
