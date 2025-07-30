@@ -1,4 +1,4 @@
-name: Port Ocean Kafka Exporter
+name: Port Ocean Kafka Integraton
 
 on:
   workflow_dispatch:
@@ -13,20 +13,19 @@ jobs:
       - name: Checkout code (optional)
         uses: actions/checkout@v3
 
+      - name: Debug: Print secret value
+        run: |
+          echo "OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING:"
+          echo "$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING"
+        env:
+          OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING: ${{ secrets.OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING }}
+
       - name: Run Port Ocean Kafka Container
         env:
           OCEAN__PORT__CLIENT_ID: ${{ secrets.OCEAN__PORT__CLIENT_ID }}
           OCEAN__PORT__CLIENT_SECRET: ${{ secrets.OCEAN__PORT__CLIENT_SECRET }}
           OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING: ${{ secrets.OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING }}
         run: |
-          echo "Checking if OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING is set..."
-          if [ -z "$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING" ]; then
-            echo "❌ OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING is empty or not set."
-            exit 1
-          else
-            echo "✅ OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING is set."
-          fi
-
           integration_type="kafka"
           version="latest"
           image_name="ghcr.io/port-labs/port-ocean-$integration_type:$version"
