@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code (optional)
         uses: actions/checkout@v3
 
-      - name: Debug: Print secret value
+      - name: Debug Print secret value
         run: |
           echo "OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING:"
           echo "$OCEAN__INTEGRATION__CONFIG__CLUSTER_CONF_MAPPING"
