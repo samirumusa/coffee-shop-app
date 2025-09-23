@@ -1,0 +1,8 @@
+order_service:
+  scale:
+    autoscaling:
+      enabled: true payment_gateway:
+  scale:
+    autoscaling:
+      enabled: false legacy_service:
+  foo: bar 
