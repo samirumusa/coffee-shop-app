@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: InApp-V3
+  description: List of all inapp-v3 routes
+  version: 1.0.0
+servers:
+  - url: 'http://{host}/v3/campaigns/inapp/'
+    description: InApp-V3 Host Machine
+    variables:
+      host:
+        default: staging7.moengage.com
+        description: pp machine
+tags:
+  - name: Template
+    description: Template Management
+  - name: Campaign
+    description: Campaign Management
+  - name: SDK Interactions
+    description: API hits from sdks
+  - name: Campaign Partials
+    description: API calls to save partially created campaigns
+
+security:
+  - ApiKeyAuth1: []
+  - ApiKeyAuth2: []
+  - DashboardUserId: []
+paths:
+  '/templates':
+    get:
+      summary: Predefined Templates
+      description: >-
+        The template end point returns the list of all template metadata based on the sdk type
+      parameters:
+        - $ref: '#/components/parameters/sdk_type'
+      tags:
+        - Template
+      responses:
+        '200':
+          description: An array of templates
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TemplateBase'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
