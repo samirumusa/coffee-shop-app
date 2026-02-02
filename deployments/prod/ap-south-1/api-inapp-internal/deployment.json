@@ -1,0 +1,26 @@
+{
+    "name": "api-inapp-internal",
+    "business": "campaigns",
+    "service": "inappv3",
+    "subservice": "internal",
+    "package_name": "moe-inapps",
+    "package_version": "8.3.30",
+    "deployment_system": "codedeploy",
+    "deployment_version": "0.0.9",
+    "codedeploy_application": "inapps",
+    "codedeploy_deployment_group": "api-inapps-inappv3-internal",
+    "apis": [
+        {
+           "name": "apis_inapp_internal",
+           "type": "moengage_api",
+           "newrelic_metric_tracking": true,
+           "app": "moengage.inapps.app",
+           "process_count": 4,
+           "thread_count": 8,
+           "dns": "inapps-internal.moengage.com",
+           "api_type": "internal",
+           "port": 32502,
+           "path": "/v3/campaigns/inapp"
+        }
+    ]
+}
