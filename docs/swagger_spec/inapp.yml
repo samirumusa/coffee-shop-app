@@ -16,7 +16,7 @@ tags:
   - name: Campaign
     description: Campaign Management
   - name: SDK Interactions
-    description: API hits from sdks
+    description: API hits from sdkshj
   - name: Campaign Partials
     description: API calls to save partially created campaigns
 
