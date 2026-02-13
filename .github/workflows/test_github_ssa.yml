@@ -1,0 +1,61 @@
+name: Test Github integration
+
+on:
+  workflow_dispatch:
+    inputs:
+      text:
+        required: true
+        description: Test input text
+        type: string
+      port_context:
+        required: true
+        description: Who triggered the action and general context (blueprint, run id, etc...)
+        type: string
+
+jobs:
+  test-github-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show raw inputs
+        run: |
+          echo "Text: ${{ inputs.text }}"
+          echo "Raw port_context:"
+          echo '${{ inputs.port_context }}'
+
+      - name: Parse port_context
+        id: parse-context
+        run: |
+          # Install jq
+          sudo apt-get update && sudo apt-get install -y jq
+
+          CONTEXT='${{ inputs.port_context }}'
+
+          USER_FIRST_NAME=$(echo "$CONTEXT" | jq -r '.user_first_name // empty')
+          USER_LAST_NAME=$(echo "$CONTEXT" | jq -r '.user_last_name // empty')
+          RUN_ID=$(echo "$CONTEXT" | jq -r '.runId // empty')
+
+          echo "User first name: $USER_FIRST_NAME"
+          echo "User last name: $USER_LAST_NAME"
+          echo "Run ID: $RUN_ID"
+
+          echo "user_first_name=$USER_FIRST_NAME" >> "$GITHUB_OUTPUT"
+          echo "user_last_name=$USER_LAST_NAME" >> "$GITHUB_OUTPUT"
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+
+      # Optional: report back to Port using the Port GitHub Action
+      - name: Inform Port about workflow completion
+        if: always()
+        uses: port-labs/port-github-action@v1
+        with:
+          clientId: ${{ secrets.PORT_CLIENT_ID }}
+          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          baseUrl: https://api.getport.io
+          operation: PATCH_RUN
+          runId: ${{ steps.parse-context.outputs.run_id }}
+          status: ${{ job.status == 'success' && 'SUCCESS' || 'FAILURE' }}
+          logMessage: |
+            ✅ Test Github integration completed.
+            Text: ${{ inputs.text }}
+            User: ${{ steps.parse-context.outputs.user_first_name }} ${{ steps.parse-context.outputs.user_last_name }}
+          summary: Test Github integration run finished
