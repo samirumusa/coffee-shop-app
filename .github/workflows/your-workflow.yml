@@ -1,0 +1,23 @@
+name: Dump Inputs Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      workflow_run_id:
+        description: 'ID of the workflow run'
+        required: true
+        default: ''
+      workflow_node_id:
+        description: 'ID of the workflow node'
+        required: true
+        default: ''
+
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print workflow_run_id
+        run: echo "workflow_run_id: ${{ github.event.inputs.workflow_run_id }}"
+
+      - name: Print workflow_node_id
+        run: echo "workflow_node_id: ${{ github.event.inputs.workflow_node_id }}"
