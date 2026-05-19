@@ -20,3 +20,5 @@ jobs:
         run: |
           echo "workflow_run_id: ${{ github.event.inputs.workflow_run_id }}"
           echo "workflow_node_id: ${{ github.event.inputs.workflow_node_id }}"
+      - name: Dump full event payload
+        run: echo '${{ toJson(github.event) }}'
