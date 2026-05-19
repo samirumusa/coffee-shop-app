@@ -11,7 +11,10 @@ on:
         description: "ID of the workflow node"
         required: true
         default: ""
-
+      workflow_node_id_two:
+        description: "ID of the workflow node"
+        required: true
+        default: ""
 jobs:
   print-inputs:
     runs-on: ubuntu-latest
@@ -20,5 +23,6 @@ jobs:
         run: |
           echo "workflow_run_id: ${{ github.event.inputs.workflow_run_id }}"
           echo "workflow_node_id: ${{ github.event.inputs.workflow_node_id }}"
+           echo "workflow_node_id_two: ${{ github.event.inputs.workflow_node_id_two }}"
       - name: Dump full event payload
         run: echo '${{ toJson(github.event) }}'
