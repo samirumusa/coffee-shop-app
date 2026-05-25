@@ -1,20 +1,11 @@
-identifier: myDomainso
-title: virtual-accounts-management990
-team: andromeda
-blueprint: virtual-accounts-management
+identifier: cricketarchive-ingester
+title: CricketArchive Ingester
+team: [main]
+icon: DefaultBlueprint
+blueprint: domain
 properties:
-  agile_delivery_manager: glavelle@visa.co
-  email: GDLCCcollection-core@visa.com
-  engineering_manager: cwiddall@visa.com
-  external_facing: false
-  handles_pii: false
-  lifecycle: Production
-  product_manager: eoneil@visa.com
-  runbook_url: https://ccycloud.atlassian.net/wiki/x/P4A4XAE
-  singleton: false
-  slack_channel: team-collection-core
-  tier: "1"
-  values: 
+  type: backend
+  framework: Spring Boot
+  importance: Low
 relations:
-  domain: "test"
-  team: "andromeda"
+  customer: ab_test_4
