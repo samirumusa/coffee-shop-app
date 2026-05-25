@@ -8,4 +8,4 @@ properties:
   framework: Spring Boot
   importance: Low
 relations:
-  customer: ab_test_4
+  customers: ab_test_4
