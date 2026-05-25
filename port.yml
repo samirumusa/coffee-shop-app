@@ -1,6 +1,6 @@
 identifier: cricketarchive-ingester
 title: CricketArchive Ingester
-team: [main]
+team: [domain]
 icon: DefaultBlueprint
 blueprint: domain
 properties:
