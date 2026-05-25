@@ -1,6 +1,6 @@
 identifier: cricketarchive-ingester
 title: CricketArchive Ingester
-team: [domain]
+team: [andromeda]
 icon: DefaultBlueprint
 blueprint: domain
 properties:
